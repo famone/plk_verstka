@@ -201,6 +201,7 @@ header{
 	background-position: left 19px center;
 	background-repeat: no-repeat;
 	background-size: 15px;
+	-webkit-border-radius: 8px;
 }
 
 /* main */
@@ -239,9 +240,15 @@ header{
 	font-size: 22px;
 	margin-right: 10px;
 }
+.tab-btns button svg{
+	margin-right: 10px;
+}
 .tab-btns .tabAc{
 	background-color: #2386C3;
 	color: #fff;
+}
+.tab-btns .tabAc svg{
+	fill: #fff !important;
 }
 
 /* .tab-form */
@@ -361,7 +368,14 @@ header{
 	padding: 211px 0 88px 0;
 }
 .serv2{
-	padding: 80px 0;
+	padding: 80px 0 !important;
+}
+h1{
+	font-size: 32px;
+	color: #333;
+	margin-top: 0;
+	margin-bottom: 40px;
+	font-weight: 600;
 }
 h2{
 	font-size: 32px;
@@ -405,7 +419,7 @@ h2{
 	background-size: contain;
 	background-repeat: no-repeat;
 	top: 38px;
-	right: 42px;
+	right: 28px;
 	content:'';
 }
 .serv-box:hover::before{
@@ -456,6 +470,25 @@ h4{
 	opacity: 1;
 }
 
+.serv-box.opened-box .serv-descr{
+	display: block;
+    height: inherit;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+.serv-box.opened-box .serv-descr .white-txt{
+	color: #333;
+}
+.serv-box.opened-box::before{
+	display: none !important;
+}
+.serv-box.opened-box:hover .white-txt{
+	color: #fff;
+}
+.serv-box.opened-box:hover  .serv-descr{
+	border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
 
 /*  */
 #advant{
@@ -615,6 +648,7 @@ h4{
 }
 .slider-box .swiper-pagination{
 	position: relative;
+	margin-top: 24px;
 }
 .slider-box .swiper-pagination-bullet-active{
 	background:#BDBDBD;
@@ -629,7 +663,6 @@ h4{
 }
 .cert-slide{
 	padding: 0 64px;
-	margin-bottom: 24px;
 }
 .cert-slide img{
 	width: 100%;
@@ -638,7 +671,7 @@ h4{
 .prevBtn{
 	position: absolute;
 	left: 0;
-	top: calc(50% - 16px);
+	top: calc(50% - 24px);
 	height: 32px;
 	width: 32px;
 	background-color:#2386C3;
@@ -653,7 +686,7 @@ h4{
 .nextBtn{
 	position: absolute;
 	right: 0;
-	top: calc(50% - 16px);
+	top: calc(50% - 24px);
 	height: 32px;
 	width: 32px;
 	background-color:#2386C3;
@@ -766,10 +799,18 @@ footer li a:hover{
 	margin-right: 16px;
 	transition: all .3s ease;
 }
+.go-back img{
+	margin-top: -2px;
+	height: 14px;
+	margin-right: 16px;
+}
 .text-ul{
 	font-size: 16px;
 	padding-left: 20px;
 	margin-bottom: 15px;
+}
+.dictionary{
+	margin-bottom: 40px;
 }
 .dictionary-head{
 	display: flex;
@@ -778,6 +819,7 @@ footer li a:hover{
 	background-color: #E0E0E0;
 	padding: 16px 24px;
 	border-radius: 8px 8px 0 0;
+	cursor: pointer;
 }
 .dictionary-head h4{
 	margin-bottom: 0;
@@ -786,9 +828,16 @@ footer li a:hover{
 	color: #000;
 }
 .dictionary-body{
-	padding: 24px 24px;
+	padding: 0px 24px;
 	border-radius: 0 0 8px 8px;
 	background-color: #F2F2F2;
+	transition: all .3s ease;
+	overflow: hidden;
+	height: 0;
+}
+.dictionary-body.active{
+	padding: 24px 24px;
+	height: inherit;
 }
 .grey-boxes{
 	margin-left: -8px;
@@ -827,12 +876,21 @@ footer li a:hover{
 	font-size: 14px;
 	font-weight: 600;
 }
+.grey-box-icon .nums{
+	font-size: 16px;
+	font-weight: 400;
+}
 .grey-box-icon .black-txt{
 	margin-top: 8px;
 	margin-bottom: 0;
 	line-height: inherit;
 	width: 100%;
 	font-size: 13px;
+}
+.grey-box-icon ul{
+	margin-top: 8px;
+	font-size: 13px;
+	padding: 0 0 0 15px;
 }
 
 .blue-form{
@@ -883,6 +941,9 @@ textarea::placeholder{
 }
 .blue-form .small-gray{
 	color: rgba(255, 255, 255, 0.6);
+}
+.small-gray img{
+	margin-top: -2px;
 }
 .blue-form select{
 	margin-bottom: 16px;
@@ -946,12 +1007,26 @@ textarea::placeholder{
 	padding: 24px;
 	margin-bottom: 16px;
 }
+.info-box input{
+	width: 100%;
+	font-size: 16px;
+	color: #333;
+	padding: 13px 20px;
+	background-color: #fff;
+	border-radius: 8px;
+	border: 1px solid #fff;
+	margin-bottom: 16px;
+}
 .info-box button{
 	width: 100%;
 }
 .info-box h4{
 	font-weight: 700;
 	margin-bottom: 16px;
+}
+.info-box h3{
+	font-weight: 600;
+	font-size:24px;
 }
 .small-gray{
 	color: #828282;
@@ -1017,6 +1092,7 @@ textarea::placeholder{
 	position: absolute;
 	color:#2386C3;
 	padding-inline-start: .25ch;
+	padding-inline-end: .5ch;
 	content: " . . . . . . . . . . . . . . . . . . . "
 		  ". . . . . . . . . . . . . . . . . . . . . . . "
 		  ". . . . . . . . . . . . . . . . . . . . . . . "
@@ -1055,11 +1131,12 @@ textarea::placeholder{
 /* simple-table */
 .small-black{
 	font-size: 14px;
+	line-height: 22px;
 }
 .simple-table{
 	border-radius: 8px;
 	width: 100%;
-	table-layout: fixed;
+	table-layout: auto;
 	background-color: #fff;
 	font-size: 12px;
 }
@@ -1070,7 +1147,7 @@ textarea::placeholder{
 	border-bottom: #D3E7F3 1px solid
 }
 .simple-table td{
-	padding: 12px;
+	padding: 12px 10px;
 	vertical-align: top;
 }
 .small-img{
@@ -1103,6 +1180,10 @@ textarea::placeholder{
 	margin-bottom: 40px;
 	font-size: 16px;
 	min-height: 39px;
+}
+.tariffs .tarif-box h4{
+	font-size: 22px !important;
+	line-height: 30px !important;
 }
 .tarif-box:hover p{
 	color: #fff;
@@ -1477,11 +1558,44 @@ textarea::placeholder{
 	color:#FFF;
 }
 
+.responsive-img{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 320px;
+	border-radius: 8px;
+}
+
+
+/* sales-slider */
+.sales-slider .sale-card{
+	height: 180px;
+}
+.sales-slider .sale-card:hover{
+	box-shadow: none
+}
+.swiper-scrollbar{
+	margin-bottom: 10px;
+	bottom: 0;
+	height: 2px;
+}
+.swiper-scrollbar-drag{
+	cursor: pointer;
+	background:#2386C3 !important;
+	height: 10px;
+	top: -4px;
+}
 /*ADAPTIIIIIIIIIV*/
 
 
 @media (max-width: 1199px) {
-	
+	.acceptions{
+		display: block;
+	}
+	.custom-chb{
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
 }
 @media (max-width: 991px) {
 	.main-navigation{
@@ -1489,6 +1603,32 @@ textarea::placeholder{
 	}
 	.main-navigation .container{
 		padding: 0 12px;
+	}
+	.change-punkt {
+		right: calc(50% - 17px);
+		top: calc(100% - 26px);
+	}
+	footer{
+		padding: 40px 0;
+	}
+	footer h6{
+		margin-bottom: 15px;
+	}
+	footer ul{
+		margin-bottom: 30px !important;
+	}
+	ul.mb-80{
+		margin-bottom: 30px !important;
+	}
+	.nextBtn, .prevBtn{
+		top: calc(50% - 40px);
+	}
+	.slider-box{
+		padding: 30px;
+		margin-bottom: 30px;
+	}
+	.serv-box::before{
+		right: 20px;
 	}
 }
 @media (max-width: 786px) {
@@ -1498,6 +1638,71 @@ textarea::placeholder{
  	
 }
 @media (max-width: 672px) {
+	#contact, #sliders, #partners, #sales, #news{
+		padding-bottom: 40px;
+	}
+
+	/* .timeline:nth-child(odd) {
+		padding: 55px 20px;
+		border-radius: 70px 0 0 70px;
+		border-top-color: transparent;
+	}
+	.timeline:nth-child(even) {
+		padding: 55px 20px;
+		border-radius: 0 70px 70px 0;
+		width: calc(100% - 60px);
+	} */
+	.timeline{
+		border-radius: 0 !important;
+		border: none !important;
+		width: 100% !important;
+		border-left: 1px dashed #000 !important;
+		margin-left: 20px !important;
+		padding: 55px 20px !important;
+	}
+	.timeline:first-child::before{
+		right: calc(100% - 7px);
+	}
+	.timeline:first-child::after{
+		right: calc(100% - 30px);
+	}
+	.timeline:last-child::before{
+		left: -8px;
+	}
+	.timeline:last-child::after{
+		left: -9px;
+	}
+	.timeline:last-child{
+		padding-bottom: 70px !important;
+	}
+	.blue-form{
+		padding: 40px 20px;
+	}
+	.interesting-news{
+		margin-bottom: 60px;
+	}
+	.mobile-carousel{
+		display: flex;
+		overflow: auto;
+		flex-wrap: nowrap;
+	}
+	.mobile-carousel .col{
+		flex: 0 0 20em;
+	}
+	.mobile-carousel .col-lg-4{
+		flex: 0 0 20em;
+	}
+	#partners .mobile-carousel .col{
+		flex: 0 0 15em;
+		margin-bottom: 30px;
+	}
+	.review-ya-box{
+		margin-bottom: 30px;
+	}
+	/* #sales .col{
+		width: 100% !important;
+		flex: 100%;
+	} */
 	.news-card-big{
 		display: block;
 		height: inherit;
@@ -1532,10 +1737,6 @@ textarea::placeholder{
 	.blue-form .change-punkt{
 		top: 85px;
 	}
-	.slider-box{
-		padding: 30px;
-		margin-bottom: 30px;
-	}
 	.advantage:last-child{
 		margin-bottom: 30px;
 	}
@@ -1543,10 +1744,16 @@ textarea::placeholder{
 		border-radius: 0 0 8px 8px;
 		padding: 30px 20px;
 	}
+	.tab-btns{
+		justify-content: space-between;
+	}
 	.tab-btns button{
-		font-size: 12px;
+		font-size: 10px;
 		margin-right: 0;
 		padding: 10px;
+	}
+	.tab-btns button svg{
+		display: none;
 	}
 	.tab-btns button span{
 		display: none;
@@ -1566,6 +1773,8 @@ textarea::placeholder{
 	}
 	#main{
 		padding-top: 100px;
+		background-size: 135%;
+		background-position: top center;
 	}
 	.logo img{
 		width: 80%;
@@ -1580,10 +1789,14 @@ textarea::placeholder{
 	
 }
 @media (max-width: 390px) {
-	
+	.serv-box h4{
+		font-size: 14px !important;
+	}
 }
 @media (max-width: 320px) {
-	
+	.serv-box h4{
+		font-size: 14px !important;
+	}
 }
 
 

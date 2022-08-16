@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ПЛК</title>
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -57,7 +57,7 @@
 <div class="topbar">
 	<div class="container">
 		<div class="topbar-row">
-			<ul class="d-none d-md-block">
+			<ul class="d-none d-lg-block">
 				<li><a href="" class="grey-link">Официальный агент IATA</a></li>
 				<li><a href="" class="grey-link">Сдача груза</a></li>
 				<li><a href="" class="grey-link">Как мы работаем</a></li>
@@ -82,7 +82,7 @@
 				<img src="./img/mainlogo.svg" alt="">
 			</a>
 
-			<div class="head-contacts d-none d-md-flex">
+			<div class="head-contacts d-none d-lg-flex">
 				<div class="head-cont">
 					<p><a href="">8 (800) 555-35-83</a></p>
 					<span>Бесплатный звонок по России</span>
@@ -98,7 +98,7 @@
 				<button class="login-btn">Войти</button>
 			</div>
 
-			<div class="d-block d-md-none burger mdi mdi-menu"></div>
+			<div class="d-block d-lg-none burger mdi mdi-menu"></div>
 		</div>
 	</div>
 </header>
@@ -106,7 +106,7 @@
 <div class="main-navigation">
 	<div class="container">
 		<div class="shapka">
-			<ul class="d-none d-md-block">
+			<ul class="d-none d-lg-block">
 				<li class="link-with-drop"><a href="">Услуги</a><img src="./img/arrd.svg" alt=""></li>
 				<li class="link-with-drop"><a href="">Типы перевозок</a><img src="./img/arrd.svg" alt=""></li>
 				<li class="link-with-drop"><a href="">Тарифы</a><img src="./img/arrd.svg" alt=""></li>
@@ -193,10 +193,36 @@
 <section id="main">
 	<div class="container">
 		<div class="tab-btns">
-			<button class="tabAc"><span class="mdi mdi-currency-rub"></span>Запрос на расчет</button>
+			<!-- <button class="tabAc"><span class="mdi mdi-currency-rub"></span>Запрос на расчет</button>
 			<button><span class="mdi mdi-package-variant-closed"></span>Отследить груз</button>
 			<button><span class="mdi mdi-credit-card-outline"></span>Онлайн-оплата</button>
-			<button><span class="mdi mdi-pencil-outline"></span>Онлайн-заявка</button>
+			<button><span class="mdi mdi-pencil-outline"></span>Онлайн-заявка</button> -->
+			<button class="tabAc">
+				<svg width="14" height="18" viewBox="0 0 14 18" fill="#333" xmlns="http://www.w3.org/2000/svg">
+					<path d="M1.75 0V9H0V10.8H1.75V12.6H0V14.4H1.75V18H3.5V14.4H7.875V12.6H3.5V10.8H8.75C11.6375 10.8 14 8.37 14 5.4C14 2.43 11.6375 0 8.75 0H1.75ZM3.5 1.8H8.75C10.6916 1.8 12.25 3.4029 12.25 5.4C12.25 7.3971 10.6916 9 8.75 9H3.5V1.8Z"/>
+				</svg>
+				Запрос на расчет
+			</button>
+			<button>
+				<svg width="22" height="22" viewBox="0 0 22 22" fill="#333" xmlns="http://www.w3.org/2000/svg">
+					<path d="M12.7875 0.354498C11.64 -0.118166 10.36 -0.118166 9.2125 0.354498L1.29663 3.61795C0.91425 3.77541 0.586409 4.04713 0.355321 4.39812C0.124233 4.74911 0.000480444 5.1633 2.87865e-08 5.58735V16.4127C-6.88379e-05 16.8372 0.123428 17.252 0.354551 17.6035C0.585674 17.9551 0.913815 18.2272 1.29663 18.3849L9.2125 21.6455C10.36 22.1182 11.64 22.1182 12.7875 21.6455L20.7034 18.3849C21.0862 18.2272 21.4143 17.9551 21.6455 17.6035C21.8766 17.252 22.0001 16.8372 22 16.4127V5.58735C21.9998 5.16306 21.8762 4.74856 21.6451 4.39729C21.414 4.04602 21.086 3.77408 20.7034 3.61653L12.7875 0.354498ZM9.724 1.6712C10.5436 1.33364 11.4578 1.33364 12.2774 1.6712L19.4618 4.63025L16.3281 5.91865L7.86638 2.43574L9.72262 1.6712H9.724ZM6.01562 3.19604L14.4774 6.68035L11 8.11457L2.53825 4.62884L6.01562 3.19745V3.19604ZM11.6875 9.35483L20.625 5.67371V16.4112C20.6252 16.5529 20.5842 16.6913 20.5073 16.8087C20.4303 16.926 20.3209 17.0169 20.1933 17.0696L12.276 20.3302C12.0835 20.4081 11.8869 20.469 11.6875 20.5114V9.35483ZM10.3125 9.35483V20.5114C10.1115 20.4692 9.91454 20.4085 9.724 20.3302L1.80675 17.0696C1.6793 17.017 1.57007 16.9263 1.49312 16.8092C1.41617 16.6922 1.37503 16.554 1.375 16.4127V5.67513L10.3125 9.35624V9.35483Z"/>
+					</svg>
+					
+				Отследить груз
+			</button>
+			<button>
+				<svg width="22" height="17" viewBox="0 0 22 17" fill="#333" xmlns="http://www.w3.org/2000/svg">
+					<path d="M15.8125 12.75C15.6302 12.75 15.4553 12.8246 15.3264 12.9575C15.1974 13.0903 15.125 13.2705 15.125 13.4583C15.125 13.6462 15.1974 13.8264 15.3264 13.9592C15.4553 14.092 15.6302 14.1667 15.8125 14.1667H18.5625C18.7448 14.1667 18.9197 14.092 19.0486 13.9592C19.1776 13.8264 19.25 13.6462 19.25 13.4583C19.25 13.2705 19.1776 13.0903 19.0486 12.9575C18.9197 12.8246 18.7448 12.75 18.5625 12.75H15.8125ZM0 3.54167C0 2.60236 0.362164 1.70152 1.00682 1.03733C1.65148 0.373139 2.52582 0 3.4375 0H18.5625C19.4742 0 20.3485 0.373139 20.9932 1.03733C21.6378 1.70152 22 2.60236 22 3.54167V13.4583C22 14.3976 21.6378 15.2985 20.9932 15.9627C20.3485 16.6269 19.4742 17 18.5625 17H3.4375C2.52582 17 1.65148 16.6269 1.00682 15.9627C0.362164 15.2985 0 14.3976 0 13.4583V3.54167ZM1.375 13.4583C1.375 14.0219 1.5923 14.5624 1.97909 14.9609C2.36589 15.3595 2.89049 15.5833 3.4375 15.5833H18.5625C19.1095 15.5833 19.6341 15.3595 20.0209 14.9609C20.4077 14.5624 20.625 14.0219 20.625 13.4583V7.08333H1.375V13.4583ZM20.625 3.54167C20.625 2.97808 20.4077 2.43758 20.0209 2.03906C19.6341 1.64055 19.1095 1.41667 18.5625 1.41667H3.4375C2.89049 1.41667 2.36589 1.64055 1.97909 2.03906C1.5923 2.43758 1.375 2.97808 1.375 3.54167V5.66667H20.625V3.54167Z"/>
+					</svg>
+					
+				Онлайн-оплата
+			</button>
+			<button>
+				<svg width="22" height="22" viewBox="0 0 22 22" fill="#333333" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M16.2241 1.0162C16.5606 0.68567 17.0168 0.5 17.4925 0.5C17.9682 0.5 18.4244 0.68567 18.7608 1.0162L21.4124 3.62278C21.7486 3.95354 21.9375 4.40201 21.9375 4.86962C21.9375 5.33722 21.7486 5.7857 21.4124 6.11646L18.5486 8.93168L18.5363 8.94478L7.43383 19.362C7.23101 19.5526 6.98553 19.6938 6.71712 19.7743L1.05413 21.4676C0.920934 21.5072 0.779309 21.5106 0.644344 21.4773C0.509379 21.444 0.386131 21.3753 0.287738 21.2786C0.189344 21.1819 0.119492 21.0607 0.0856246 20.928C0.0517575 20.7953 0.0551452 20.6561 0.0954267 20.5252L1.81083 14.9814C1.9008 14.6913 2.06537 14.4288 2.28864 14.2194L13.3665 3.82437L16.2241 1.0162ZM13.8915 5.42198L3.3509 15.3131C3.31885 15.3429 3.29518 15.3804 3.28221 15.4219L1.98617 19.609L6.26904 18.3278C6.30749 18.3162 6.34262 18.2958 6.37158 18.2684L16.905 8.38436L13.8904 5.42198H13.8915ZM18.0052 7.32903L20.3255 5.04903C20.3494 5.02563 20.3683 4.99782 20.3813 4.9672C20.3942 4.93659 20.4008 4.90377 20.4008 4.87063C20.4008 4.83748 20.3942 4.80466 20.3813 4.77405C20.3683 4.74343 20.3494 4.71562 20.3255 4.69222L17.674 2.08564C17.6502 2.06218 17.6219 2.04356 17.5907 2.03085C17.5596 2.01815 17.5262 2.01161 17.4925 2.01161C17.4588 2.01161 17.4254 2.01815 17.3942 2.03085C17.3631 2.04356 17.3348 2.06218 17.311 2.08564L14.9917 4.36564L18.0052 7.32903Z"/>
+				</svg>					
+				Онлайн-заявка
+			</button>
 		</div>
 		<!-- 1я форма -->
 		<div class="tab-form active">
@@ -243,7 +269,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-3 text-md-end">
+				<div class="col-lg-3 text-lg-end">
 					<button class="main-btn">Отправить запрос</button>
 				</div>
 			</div>
@@ -298,9 +324,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<h2>Услуги</h2>
+				<h1>Услуги</h1>
 			</div>
-			<div class="col-lg-4">
+			<div class="col-sm-6 col-lg-4">
 				<div class="serv-box">
 					<div class="serv-box-img">
 						<img src="./img/s1.svg" alt="">
@@ -309,7 +335,7 @@
 					<h4>Авиаперевозки</h4>
 				</div>
 			</div>
-			<div class="col-lg-4">
+			<div class="col-sm-6 col-lg-4">
 				<div class="serv-box">
 					<div class="serv-box-img">
 						<img src="./img/s2.svg" alt="">
@@ -318,7 +344,7 @@
 					<h4>Автоперевозки</h4>
 				</div>
 			</div>
-			<div class="col-lg-4">
+			<div class="col-sm-6 col-lg-4">
 				<div class="serv-box">
 					<div class="serv-box-img">
 						<img src="./img/s3.svg" alt="">
@@ -327,7 +353,7 @@
 					<h4>Ж/Д перевозки</h4>
 				</div>
 			</div>
-			<div class="col-lg-4">
+			<div class="col-sm-6 col-lg-4">
 				<div class="serv-box">
 					<div class="serv-box-img">
 						<img src="./img/s4.svg" alt="">
@@ -336,7 +362,7 @@
 					<h4>Морской фрахт </h4>
 				</div>
 			</div>
-			<div class="col-lg-4">
+			<div class="col-sm-6 col-lg-4">
 				<div class="serv-box">
 					<div class="serv-box-img">
 						<img src="./img/s5.svg" alt="">
@@ -345,13 +371,13 @@
 					<h4>Мультимодальные</h4>
 				</div>
 			</div>
-			<div class="col-lg-4">
+			<div class="col-sm-6 col-lg-4">
 				<div class="serv-box">
 					<div class="serv-box-img">
 						<img src="./img/s6.svg" alt="">
 						<img src="./img/s6w.svg" alt="">
 					</div>
-					<h4>Таможенное оформление груза</h4>
+					<h4>Таможенное оформление <br> груза</h4>
 				</div>
 			</div>
 		</div>
@@ -410,7 +436,8 @@
 					<a href="" class="blue-link" style="font-size: 16px;">Смотреть все акции </a>
 				</p>
 			</div>
-
+		</div>
+		<div class="row mobile-carousel">
 			<div class="col">
 				<div class="sale-card">
 					<div class="status">акция</div>
@@ -457,7 +484,8 @@
 					<a href="" class="blue-link" style="font-size: 16px;">Смотреть все новости</a>
 				</p>
 			</div>
-
+		</div>
+		<div class="row mobile-carousel">
 			<div class="col-lg-4">
 				<div class="news-card">
 					<div class="status">акция</div>
@@ -487,7 +515,7 @@
 <section id="about">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6">
+			<div class="col-lg-6 order-2 order-lg-1">
 				<h2>Грузовые перевозки</h2>
 				<p class="black-txt">В тот момент, когда нужно отправить габаритный груз в другой город или страну, приходится искать надежного помощника. Заказать грузовые перевозки в Петербурге  через нашу компанию значит заручиться надежной поддержкой. Мы оказываем услуги с 2014 года. За это время смогли наладить сотрудничество с партнерами, создали свой автопарк, увеличили клиентскую базу. 
 				<br><br>
@@ -496,10 +524,12 @@
 				* Указанное время доставки действует для выборочных направлений и является ориентировочным.
 				</p>
 			</div>
-			<div class="col-lg-5 offset-lg-1">
+			<div class="col-lg-5 offset-lg-1 order-1 order-lg-2">
 				<img src="./img/about1.png" alt="">
 			</div>
-			<div class="spacer"></div>
+		</div>
+		<div class="spacer"></div>
+		<div class="row">
 			<div class="col-lg-5">
 				<img src="./img/about2.png" alt="">
 			</div>
@@ -630,6 +660,8 @@
 			<div class="col-lg-12">
 				<h2>Наши партнеры</h2>
 			</div>
+		</div>
+		<div class="row mobile-carousel">
 			<div class="col">
 				<img src="./img/p1.png" alt="">
 			</div>
@@ -653,7 +685,7 @@
 <footer>
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-3">
+			<div class="col-sm-6 col-lg-3">
 				<h6>Услуги</h6>
 				<ul>
 					<li><a href="">Сборный груз</a></li>
@@ -670,7 +702,7 @@
 					<li><a href="">МВЛ</a></li>
 				</ul>
 			</div>
-			<div class="col-lg-4">
+			<div class="col-sm-6 col-lg-4">
 				<h6>Тарифы</h6>
 				<ul class="mb-80">
 					<li><a href="">Тарифы на авиаперевозки груза по России</a></li>
@@ -689,7 +721,7 @@
 					<li><a href="">Транзитные грузы</a></li>
 				</ul>
 			</div>
-			<div class="col-lg-2">
+			<div class="col-sm-6 col-lg-2">
 				<h6>О компании</h6>
 				<ul class="mb-80">
 					<li><a href="">О компании</a></li>
@@ -709,7 +741,7 @@
 				</ul>
 			</div>
 
-			<div class="col-lg-3">
+			<div class="col-sm-6 col-lg-3">
 				<h6>Клиентам</h6>
 				<ul class="mb-80">
 					<li><a href="">Оферта</a></li>

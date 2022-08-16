@@ -71,6 +71,33 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     })
 
+    const customChb = document.querySelectorAll('.custom-chb');
+
+    if(customChb.length){
+        for(let i = 0; i < customChb.length; i++){
+            customChb[i].addEventListener('click', function(){
+                customChb[i].classList.toggle('acChb')
+            })
+        }
+    }
+
+    let dictionary = document.querySelector('.dictionary')
+
+    if(dictionary){
+        let dictHead = dictionary.querySelector('.dictionary-head')
+        let dictBody = dictionary.querySelector('.dictionary-body')
+        let plusMin = dictionary.querySelector('.plus-min')
+
+        dictHead.addEventListener('click', function(){
+            if(dictBody.classList.contains('active')){
+                dictBody.classList.remove('active')
+                plusMin.innerHTML = '+'
+            }else{
+                dictBody.classList.add('active')
+                plusMin.innerHTML = '-'
+            }
+        })
+    }
 
     // switchers-btn
     let switchBtn = document.querySelectorAll('.switch-btn span');
@@ -84,8 +111,9 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         
     }
-
     // search
+
+    
     ymaps.ready(init);
     function init() {
         var myMap = new ymaps.Map("map", {

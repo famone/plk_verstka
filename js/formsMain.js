@@ -13,3 +13,4 @@ for(let i = 0; i < formTabBtn.length; i++){
         tabForm[i].classList.add('active')
     })
 }
+
