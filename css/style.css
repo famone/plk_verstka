@@ -1181,6 +1181,9 @@ textarea::placeholder{
 	font-size: 16px;
 	min-height: 39px;
 }
+.tarif-box .blue-link svg{
+	margin-left: 16px;
+}
 .tariffs .tarif-box h4{
 	font-size: 22px !important;
 	line-height: 30px !important;
@@ -1200,6 +1203,9 @@ textarea::placeholder{
 }
 .tarif-box:hover .blue-link{
 	color:#fff;
+}
+.tarif-box:hover .blue-link svg path{
+	stroke:#fff;
 }
 .tarif-box .blue-link:hover{
 	color:#fff !important;
@@ -1595,6 +1601,18 @@ textarea::placeholder{
 	.custom-chb{
 		margin-right: 0;
 		margin-bottom: 10px;
+	}
+	.head-cont a{
+		font-size: 14px;
+	}
+	.head-cont span{
+		font-size: 10px;
+	}
+	.logo img{
+		height: 25px;
+	}
+	.main-navigation li{
+		margin-right: 30px;
 	}
 }
 @media (max-width: 991px) {
